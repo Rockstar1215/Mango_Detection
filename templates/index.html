@@ -76,12 +76,12 @@
         <button type="submit">Detect</button>
     </form>
 
-    {% if result %}
-        <h2>{{ result }}</h2>
-    {% endif %}
-
     <h3>Uploaded Image</h3>
       {% if image_path %}
 <img src="{{ url_for('uploaded_image', filename=image_path) }}" alt="Uploaded Image">      {% endif %}
+
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
 </body>
 </html>
